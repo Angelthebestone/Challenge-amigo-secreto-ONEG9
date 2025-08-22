@@ -21,3 +21,16 @@ function agregarAmigo() {
     return; //finaliza la función
   }
 }
+
+//primero tengo que crear la variable donde voy a guardar el elemento
+function actualizarListadeAmigos() {
+let lista = document.getElementById("lista-amigos"); //selecciona el elemento de la lista de amigos
+  lista.innerHTML = ""; //limpia el contenido de la lista de amigos
+  for (i=0; i <= listaDeAmigos.length; i++) {
+  let crear = document.createElement("li")
+  crear.textContent = lista(i);
+  
+  }
+}
+
+
