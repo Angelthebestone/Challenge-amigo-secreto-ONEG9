@@ -24,13 +24,22 @@ function agregarAmigo() {
 
 //primero tengo que crear la variable donde voy a guardar el elemento
 function actualizarListadeAmigos() {
-let lista = document.getElementById("lista-amigos"); //selecciona el elemento de la lista de amigos
+let lista = document.getElementById("listaAmigos"); //selecciona el elemento de la lista de amigos
   lista.innerHTML = ""; //limpia el contenido de la lista de amigos
-  for (i=0; i <= listaDeAmigos.length; i++) {
-  let crear = document.createElement("li")
-  crear.textContent = lista(i);
-  
+  for (i=0; i < listaDeAmigos.length; i++) { //ciclo for para recorrer la lista de amigos
+  let crear = document.createElement("li") //crea un nuevo elemento de lista
+  crear.textContent = listaDeAmigos[i];
+  lista.appendChild(crear);
   }
 }
 
+function sortearAmigo() {
+  if (listaDeAmigos.length >= 3) {
+    alert("Tienes que tener dos amigos como mínimo para poder sortear")
+  } else {
+   let numeroRandom = Math.floor(Math.random() * listaDeAmigos.length);
+   let amigoSeleccionado = listaDeAmigos[numeroRandom];
+   document.getElementById("ListaAmigos").innerHTML = "el amigo sorteado es: " +amigoSeleccionado;
+  }
+}
 
