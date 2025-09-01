@@ -2,7 +2,7 @@
 let listaDeAmigos = [];
 
 function limpiarCampo() {
-  document.getElementById("amigo").value = "";
+  document.getElementById("amigo").value = ""; //limpia el campo de texto
 }
 function agregarAmigo() { 
  
@@ -18,6 +18,7 @@ function agregarAmigo() {
     listaDeAmigos.push(nombre); //agrega el nombre a la lista de amigos
     console.log(listaDeAmigos); //muestra la lista actualizada de amigos
     limpiarCampo(); //limpia el campo de entrada
+    actualizarListadeAmigos(); //actualiza la lista en pantalla
     return; //finaliza la función
   }
 }
@@ -32,14 +33,15 @@ let lista = document.getElementById("listaAmigos"); //selecciona el elemento de 
   lista.appendChild(crear);
   }
 }
-
+//función para sortear amigos, con un minimo de 3 amigos
 function sortearAmigo() {
-  if (listaDeAmigos.length >= 3) {
-    alert("Tienes que tener dos amigos como mínimo para poder sortear")
+  if (listaDeAmigos.length <= 3) {
+    alert("Tienes que tener dos amigos como mínimo para poder sortear"); //En el caso que no haya 3 amigos, avisa 
   } else {
-   let numeroRandom = Math.floor(Math.random() * listaDeAmigos.length);
-   let amigoSeleccionado = listaDeAmigos[numeroRandom];
-   document.getElementById("ListaAmigos").innerHTML = "el amigo sorteado es: " +amigoSeleccionado;
+    let numeroRandom = Math.floor(Math.random() * listaDeAmigos.length); //genera un numero aleatorio dependiendo de la longitud de la lista
+    let amigoSeleccionado = listaDeAmigos[numeroRandom]; //selecciona un amigo aleatorio de la lista
+    document.getElementById("resultado").innerHTML = "el amigo sorteado es: " + amigoSeleccionado; 
+    return;
   }
 }
 
