@@ -40,7 +40,7 @@ function sortearAmigo() {
   } else {
     let numeroRandom = Math.floor(Math.random() * listaDeAmigos.length); //genera un numero aleatorio dependiendo de la longitud de la lista
     let amigoSeleccionado = listaDeAmigos[numeroRandom]; //selecciona un amigo aleatorio de la lista
-    document.getElementById("resultado").innerHTML = "el amigo sorteado es: " + amigoSeleccionado; 
+    document.getElementById("resultado").innerHTML = "el amigo sorteado es: " + amigoSeleccionado; //inserta el amigo seleccionado en el HTML
     return;
   }
 }
