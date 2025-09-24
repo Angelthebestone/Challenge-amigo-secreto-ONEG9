@@ -17,5 +17,9 @@ After adding them, you push the button to ballot them.
 
 <img width="1919" height="897" alt="image" src="https://github.com/user-attachments/assets/458d0daf-0c2b-426d-9d04-c2e805ff6c6b" />
 
+You have to take into account you should have two friends or more to play, if you do not, the app is not going to run.
+ <img width="1917" height="961" alt="image" src="https://github.com/user-attachments/assets/3a63f052-64f9-4505-b755-0413538dc597" />
+
+
 
 
